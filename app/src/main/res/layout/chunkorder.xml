@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#82ade0">
+
+        <ImageView
+            android:id="@+id/orderItemImageC"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <TextView
+            android:id="@+id/orderItemNameC"
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:text="Item Name"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/orderItemImageC" />
+        <TextView
+            android:id="@+id/orderItemQuantityC"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:text="x0"
+            android:gravity="center|bottom"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintLeft_toRightOf="@id/orderItemNameC"/>
+        <TextView
+            android:id="@+id/orderItemSubtotalC"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="ITEMS SUBTOTAL"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@id/orderItemQuantityC"
+            app:layout_constraintLeft_toRightOf="@id/orderItemNameC"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/border"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

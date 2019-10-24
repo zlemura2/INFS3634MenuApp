@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderList">
+
+    <TextView
+        android:id="@+id/myOrderText"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="MY ORDER"
+        android:textSize="40sp"
+        android:background="#82ade0"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orderRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/myOrderText"
+        app:layout_constraintBottom_toTopOf="@id/totalLinearLayout"/>
+
+    <TextView
+        android:id="@+id/noItemsSelectedTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="PLEASE ADD SOME MENU ITEMS TO YOUR ORDER"
+        android:textSize="40sp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:id="@+id/totalLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:background="#82ade0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:layout_width="225dp"
+            android:layout_height="match_parent"
+            android:textSize="50sp"
+            android:text="Total: $"
+            android:textColor="#000000"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/orderTotalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="50sp"
+            android:text="0.00"
+            android:textColor="#000000"
+            android:gravity="left" />
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

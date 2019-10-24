@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemDetail">
+
+    <ImageView
+        android:id="@+id/itemImageD"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/itemNameD"
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        android:text="Item Name"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/itemImageD"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/itemPriceD"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:text="Item Price"
+        android:textColor="#000000"
+        android:textSize="55sp"
+        app:layout_constraintTop_toBottomOf="@+id/itemImageD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/itemControllerD"
+        android:layout_width="175dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toRightOf="@+id/itemPriceD"
+        app:layout_constraintTop_toBottomOf="@+id/itemNameD"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:id="@+id/itemDecrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintRight_toLeftOf="@id/itemQuantityD"
+            app:layout_constraintTop_toTopOf="@id/itemControllerD"
+            app:layout_constraintBottom_toBottomOf="@id/itemControllerD"
+            android:textSize="70sp"
+            android:text="-"/>
+
+        <TextView
+            android:id="@+id/itemIncrease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintLeft_toRightOf="@id/itemQuantityD"
+            app:layout_constraintTop_toTopOf="@id/itemControllerD"
+            app:layout_constraintBottom_toBottomOf="@id/itemControllerD"
+            android:textSize="60sp"
+            android:text="+"/>
+
+        <TextView
+            android:id="@+id/itemQuantityD"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="50sp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintLeft_toLeftOf="@id/itemControllerD"
+            app:layout_constraintRight_toRightOf="@id/itemControllerD"
+            app:layout_constraintTop_toTopOf="@id/itemControllerD"
+            app:layout_constraintBottom_toBottomOf="@id/itemControllerD"
+            android:gravity="center"
+            android:background="@drawable/border"/>
+
+        <Button
+            android:id="@+id/itemAddBtn"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="ADD"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/itemQuantityD"
+            app:layout_constraintLeft_toLeftOf="@id/itemControllerD"
+            app:layout_constraintRight_toRightOf="@id/itemControllerD"/>
+
+    </android.support.constraint.ConstraintLayout>
+    
+    <TextView
+        android:id="@+id/itemDescriptionD"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:text="Item Description"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center|top"
+        app:layout_constraintTop_toBottomOf="@+id/itemPriceD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
